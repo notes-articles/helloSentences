@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .search-container input {
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        section {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #00695c;
+            display: flex;
+            align-items: center;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding: 5px 0;
+            color: #333;
+        }
+
+        .tooltiptext {
+            visibility: hidden;
+            width: 220px;
+            background-color: #00695c;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -110px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        @media (max-width: 600px) {
+            .tooltiptext {
+                width: 180px;
+                margin-left: -90px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for sentences...">
+    </div>
+    <main id="content">
+        <section>
+            <table>
+                <caption>Introducing yourself</caption>
+                <tr>
+                    <td class="tooltip">"Hi, I'm Shine. Nice to meet you."
+                        <span class="tooltiptext">嗨，我是Shine。很高兴见到你。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Hello, I'm Shine. It's a pleasure to meet you"
+                        <span class="tooltiptext">你好，我是Shine。很高兴见到你。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Hey, I'm Shine. Glad to be working with you."
+                        <span class="tooltiptext">嘿，我是Shine。很高兴和你一起工作。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Asking for help or clarification</caption>
+                <tr>
+                    <td class="tooltip">"Could you please help me with this?"
+                        <span class="tooltiptext">你能帮我做这件事吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I'm not quite sure I understand. Could you explain it again?"
+                        <span class="tooltiptext">我不太确定我理解了。你能再解释一遍吗？</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Providing assistance</caption>
+                <tr>
+                    <td class="tooltip">"Sure, I can help you with that."
+                        <span class="tooltiptext">当然，我可以帮你。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Let me explain it to you."
+                        <span class="tooltiptext">让我来给你解释一下。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I'd be happy to assist you."
+                        <span class="tooltiptext">我很乐意帮助你。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Expressing gratitude</caption>
+                <tr>
+                    <td class="tooltip">"Thank you for your help."
+                        <span class="tooltiptext">谢谢你的帮助。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I really appreciate it."
+                        <span class="tooltiptext">我非常感激。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thanks a lot, that was very helpful."
+                        <span class="tooltiptext">非常感谢，这对我很有帮助。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Making requests</caption>
+                <tr>
+                    <td class="tooltip">"Could you please send me the report by the end of the day?"
+                        <span class="tooltiptext">你能在今天结束前把报告发给我吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Would it be possible for you to attend the meeting tomorrow?"
+                        <span class="tooltiptext">你明天能参加会议吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Can you help me with this task?"
+                        <span class="tooltiptext">你能帮我做这个任务吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Would you mind doing me a favor?"
+                        <span class="tooltiptext">你介意帮我个忙吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I was wondering if you could assist me with this project."
+                        <span class="tooltiptext">我在想你能否协助我完成这个项目。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Could you spare a moment to discuss this matter?"
+                        <span class="tooltiptext">你能抽出一点时间讨论这个问题吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Is it possible for you to attend the meeting tomorrow?"
+                        <span class="tooltiptext">你明天能参加会议吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"May I request an extension on the deadline?"
+                        <span class="tooltiptext">我可以请求延长截止日期吗？</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Confirming information</caption>
+                <tr>
+                    <td class="tooltip">"Just to clarify, you mean [rephrase the information]?"
+                        <span class="tooltiptext">只是为了澄清，你的意思是[重新表达信息]？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"So, if I understand correctly, [repeat what you understood]?"
+                        <span class="tooltiptext">所以，如果我理解正确的话，[重复你理解的内容]？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Could you confirm [specific detail] for me, please?"
+                        <span class="tooltiptext">你能为我确认一下[具体细节]吗？</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Expressing agreement or disagreement</caption>
+                <tr>
+                    <td class="tooltip">"I completely agree with you."
+                        <span class="tooltiptext">我完全同意你的观点。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I see your point, but I have a slightly different perspective."
+                        <span class="tooltiptext">我明白你的观点，但我有稍微不同的看法。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I'm afraid I have to disagree with that."
+                        <span class="tooltiptext">恐怕我不同意这个。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Scheduling and arranging meetings</caption>
+                <tr>
+                    <td class="tooltip">"Are you available for a meeting tomorrow?"
+                        <span class="tooltiptext">你明天有空开会吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"What time works best for you to meet?"
+                        <span class="tooltiptext">什么时间开会最适合你？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Let's schedule a call to discuss this further."
+                        <span class="tooltiptext">让我们安排一个电话会议进一步讨论这个问题。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Offering suggestions</caption>
+                <tr>
+                    <td class="tooltip">"Perhaps we could try [suggestion] to solve this issue."
+                        <span class="tooltiptext">也许我们可以尝试[建议]来解决这个问题。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Have you considered [alternative suggestion] as an option?"
+                        <span class="tooltiptext">你是否考虑过[替代建议]作为一个选项？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"How about we [suggestion]?"
+                        <span class="tooltiptext">我们可以[建议]吗？</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption>Wrapping up conversations</caption>
+                <tr>
+                    <td class="tooltip">"Well, it was great talking to you. Let's catch up again soon."
+                        <span class="tooltiptext">嗯，很高兴和你聊天。我们尽快再联系。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thanks for the discussion. I'll get back to you with the updates."
+                        <span class="tooltiptext">感谢你的讨论。我会把最新情况告诉你。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"If you have any further questions, feel free to reach out to me."
+                        <span class="tooltiptext">如果你有任何进一步的问题，请随时联系我。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+    <script>
+        function searchFunction() {
+            var input, filter, sections, tables, tr, td, i, j, k, txtValue, sectionVisible;
+            input = document.getElementById("searchInput");
+            filter = input.value.toUpperCase();
+            sections = document.getElementsByTagName("section");
+
+            for (i = 0; i < sections.length; i++) {
+                tables = sections[i].getElementsByTagName("table");
+                sectionVisible = false;
+
+                for (j = 0; j < tables.length; j++) {
+                    tr = tables[j].getElementsByTagName("tr");
+
+                    for (k = 0; k < tr.length; k++) {
+                        td = tr[k].getElementsByTagName("td")[0];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                tr[k].style.display = "";
+                                sectionVisible = true;
+                            } else {
+                                tr[k].style.display = "none";
+                            }
+                        }
+                    }
+                }
+
+                if (sectionVisible) {
+                    sections[i].style.display = "";
+                } else {
+                    sections[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

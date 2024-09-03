@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,7 +68,7 @@
 
         .tooltiptext {
             visibility: hidden;
-            width: 220px;
+            width: 520px;
             background-color: #00695c;
             color: #fff;
             text-align: center;
@@ -95,11 +96,830 @@
         }
     </style>
 </head>
+
 <body>
     <div class="search-container">
         <input type="text" id="searchInput" onkeyup="searchFunction()" placeholder="Search for sentences...">
     </div>
     <main id="content">
+        <section>
+            <table>
+                <caption class="tooltip">Mid-Project Review Meeting<span class="tooltiptext">中期项目评审会议</span></caption>
+                <tr>
+                    <td class="tooltip">"Thank you all for joining the mid-project review. We’re currently in the second
+                        week of February, so let’s discuss where we stand. How’s the backend development progressing?"
+                        <span class="tooltiptext">感谢大家参加中期项目评审会议。我们现在正处于二月的第二周，所以让我们讨论一下目前的进展。后端开发进行得如何？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"The backend is on track. We’ve completed 80% of the tasks, and I expect to
+                        finish the remaining 20% within the next two weeks. The team has been working 50 hours per week,
+                        and I estimate we’ll need an additional 100 hours to wrap up." <span
+                            class="tooltiptext">后端开发进展顺利。我们已经完成了80%的任务，我预计在接下来的两周内完成剩下的20%。团队每周工作50小时，我估计还需要额外的100小时来完成。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"That’s good to hear. For the frontend, we’ve completed about 60% of the work.
+                        We’re currently a bit behind schedule, so we may need to put in extra effort over the next three
+                        weeks to catch up." <span
+                            class="tooltiptext">很高兴听到这个消息。前端已经完成了大约60%的工作。目前我们稍微落后于计划，所以接下来的三周可能需要加把劲赶上进度。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Understood. If necessary, we could extend the testing phase by one week in
+                        March to ensure everything is stable before the final release." <span
+                            class="tooltiptext">明白。如果有必要，我们可以在三月份将测试阶段延长一周，以确保在最终发布前一切稳定。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Budget Discussion<span class="tooltiptext">预算讨论</span></caption>
+                <tr>
+                    <td class="tooltip">"We need to revisit our budget allocation. The initial estimate for the backend
+                        was $20,000, but given the additional hours, we might need to increase it by another $5,000. How
+                        does that sound?" <span
+                            class="tooltiptext">我们需要重新审视我们的预算分配。最初后端的预算是20,000美元，但考虑到额外的工时，我们可能需要再增加5,000美元。大家觉得怎么样？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I think that’s reasonable, especially if it ensures the project stays on track.
+                        For the frontend, we’ve spent $15,000 so far, and I expect we’ll need an additional $3,000 to
+                        $4,000 to complete everything." <span
+                            class="tooltiptext">我认为这是合理的，特别是如果这能确保项目按计划进行的话。前端目前已经花费了15,000美元，我预计还需要额外的3,000到4,000美元才能完成所有工作。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"That puts us at a total of around $28,000 to $29,000 for both frontend and
+                        backend development. Let’s make sure we get approval for the additional budget this week." <span
+                            class="tooltiptext">这样前端和后端开发的总费用大约在28,000到29,000美元之间。让我们确保本周能得到额外预算的批准。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Resource Allocation<span class="tooltiptext">资源分配</span></caption>
+                <tr>
+                    <td class="tooltip">"We currently have 8 developers working on the backend and 5 on the frontend. To
+                        stay on schedule, do we need to reallocate any resources?" <span
+                            class="tooltiptext">目前我们有8名开发人员在后端工作，5名在前端工作。为了按计划进行，我们需要重新分配资源吗？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"It might be helpful to temporarily assign 2 backend developers to the frontend
+                        for the next two weeks. This way, we can ensure that both areas progress smoothly." <span
+                            class="tooltiptext">我们可能需要在接下来的两周内临时分配2名后端开发人员到前端工作。这样我们可以确保前后端都能顺利进展。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I agree. Let’s make that adjustment and monitor the progress closely. We should
+                        be able to stay on track for the March release." <span
+                            class="tooltiptext">我同意。让我们做出这个调整并密切监控进展。我们应该能够按计划在三月发布。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Discussing Bug with QA Engineer<span class="tooltiptext">与测试工程师讨论Bug</span>
+                </caption>
+                <tr>
+                    <td class="tooltip">"I’ve reviewed the bug report you submitted. It seems to be an edge case. Could
+                        you provide more details on how to reproduce it?" <span
+                            class="tooltiptext">我已经查看了你提交的Bug报告。看起来是一个边缘情况。你能否提供更多关于如何重现它的细节？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Certainly. The issue occurs when the user navigates back to the previous page
+                        after completing the form. I'll attach a video and steps in the ticket." <span
+                            class="tooltiptext">当然。当用户在填写完表单后返回上一页时，这个问题就会出现。我会在工单中附上视频和具体步骤。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thanks for the clarification. I'll investigate the root cause and provide a fix
+                        as soon as possible." <span class="tooltiptext">感谢澄清。我会调查根本原因，并尽快提供修复方案。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Requirement Clarification with Business Analyst<span
+                        class="tooltiptext">与业务分析师澄清需求</span></caption>
+                <tr>
+                    <td class="tooltip">"I’m reviewing the requirements document, and I have a few questions about the
+                        user permissions. Could we go over this together?" <span
+                            class="tooltiptext">我正在审查需求文档，我对用户权限有几个问题。我们能一起讨论一下吗？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Of course. Let’s set up a time to go through the details. I want to make sure
+                        everything is clear before we proceed." <span
+                            class="tooltiptext">当然。我们安排个时间详细讨论一下。我想确保在我们推进之前一切都清楚。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"That sounds good. I’ll prepare my questions, and we can discuss them in our
+                        next meeting." <span class="tooltiptext">听起来不错。我会准备好我的问题，我们可以在下次会议中讨论。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Timeline Discussion with Project Manager<span
+                        class="tooltiptext">与项目经理讨论时间表</span></caption>
+                <tr>
+                    <td class="tooltip">"Given the current workload, I’m concerned that we might not meet the upcoming
+                        deadline. Could we reassess the timeline?" <span
+                            class="tooltiptext">考虑到当前的工作量，我担心我们可能无法按时完成。我们能重新评估一下时间表吗？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I understand your concern. Let’s review the critical tasks and see if there are
+                        any that can be deferred or re-prioritized." <span
+                            class="tooltiptext">我理解你的担忧。让我们审查一下关键任务，看看是否有可以推迟或重新排序的任务。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"That’s a good approach. I’ll prepare an updated task list, and we can decide
+                        the next steps together." <span class="tooltiptext">这是一个好的方法。我会准备一份更新的任务清单，我们可以一起决定下一步。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Code Review Discussion with Team<span class="tooltiptext">与团队讨论代码评审</span>
+                </caption>
+                <tr>
+                    <td class="tooltip">"I’ve made some changes to the service layer. Can you please review the code and
+                        provide feedback?" <span class="tooltiptext">我对服务层做了一些修改。你能否审查一下代码并提供反馈？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Sure, I'll take a look this afternoon and leave comments in the pull request."
+                        <span class="tooltiptext">当然，我今天下午会查看并在拉取请求中留下评论。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thanks! I’m particularly interested in your thoughts on the new error handling
+                        logic." <span class="tooltiptext">谢谢！我特别想听听你对新的错误处理逻辑的看法。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Sprint Planning with Team<span class="tooltiptext">与团队的Sprint规划</span>
+                </caption>
+                <tr>
+                    <td class="tooltip">"In this sprint, our focus will be on improving the performance of the database
+                        queries. Does anyone foresee any potential blockers?" <span
+                            class="tooltiptext">在这个Sprint中，我们的重点是提高数据库查询的性能。有人预见到任何潜在的阻碍吗？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"We might need additional testing time to ensure the optimizations don’t
+                        introduce new issues. Other than that, I don’t see any major blockers." <span
+                            class="tooltiptext">我们可能需要额外的测试时间，以确保优化不会引入新的问题。除此之外，我没有看到任何主要的阻碍。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"That makes sense. Let’s allocate extra time for testing and proceed with the
+                        plan." <span class="tooltiptext">有道理。让我们为测试分配额外的时间，然后继续按照计划进行。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Collaboration with Frontend Engineer<span class="tooltiptext">与前端工程师的协作</span>
+                </caption>
+                <tr>
+                    <td class="tooltip">"Could you please clarify the data structure you need from the backend for the
+                        new UI component?" <span class="tooltiptext">你能否请你澄清一下前端新组件需要的后端数据结构？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Sure, the component will require a nested JSON structure with user details and
+                        their recent activities. I'll send you a sample payload." <span
+                            class="tooltiptext">当然，组件需要一个嵌套的JSON结构，包含用户详细信息和他们的最近活动。我会发送一个示例负载给你。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Perfect, I'll adjust the API response to match that format. Let me know if
+                        there are any further changes needed." <span
+                            class="tooltiptext">好的，我会调整API响应以匹配该格式。如果有任何进一步的更改，请告诉我。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Discussion with QA Engineer<span class="tooltiptext">与测试工程师的讨论</span></caption>
+                <tr>
+                    <td class="tooltip">"Could you please run an additional set of tests on the new authentication
+                        module? We’ve made some significant changes." <span
+                            class="tooltiptext">你能否对新的身份验证模块进行额外的一组测试？我们做了一些重要的更改。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"No problem. I'll include edge cases for login failures and multi-factor
+                        authentication. Do you have any specific scenarios in mind?" <span
+                            class="tooltiptext">没问题。我会包含登录失败和多因素认证的边缘情况测试。你有任何特别的测试场景需要注意的吗？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Testing login failures under high load would be crucial. Let’s ensure the
+                        system can handle simultaneous login attempts gracefully." <span
+                            class="tooltiptext">在高负载下测试登录失败的情况非常重要。我们要确保系统能够优雅地处理同时进行的登录尝试。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Consultation with Backend Engineer<span class="tooltiptext">与后端工程师的咨询</span>
+                </caption>
+                <tr>
+                    <td class="tooltip">"Can we discuss how to optimize the database queries for the new reporting
+                        feature?" <span class="tooltiptext">我们能讨论一下如何优化新报告功能的数据库查询吗？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Sure, we can look into indexing and query caching. Have you noticed any
+                        specific queries that are particularly slow?" <span
+                            class="tooltiptext">当然，我们可以研究一下索引和查询缓存。你有没有注意到哪些特定的查询特别慢？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Yes, the queries involving multiple joins are taking significantly longer.
+                        Let’s work on reducing the complexity." <span
+                            class="tooltiptext">是的，涉及多个连接的查询耗时明显更长。我们应该着手减少这些查询的复杂性。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Clarification with Business Analyst (BA)<span
+                        class="tooltiptext">与业务分析师的澄清</span></caption>
+                <tr>
+                    <td class="tooltip">"Could you clarify the business logic behind the new approval workflow?" <span
+                            class="tooltiptext">你能否澄清一下新的审批工作流背后的业务逻辑？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"The workflow requires a two-step approval for transactions above a certain
+                        threshold. I can provide you with the detailed process flow." <span
+                            class="tooltiptext">工作流要求对超过一定阈值的交易进行两步审批。我可以提供给你详细的流程图。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"That would be very helpful. I’ll ensure the implementation aligns with this
+                        logic." <span class="tooltiptext">这将非常有帮助。我会确保实现与此逻辑保持一致。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Status Update to Project Manager<span class="tooltiptext">向项目经理汇报状态</span>
+                </caption>
+                <tr>
+                    <td class="tooltip">"I wanted to give you a quick update on the module we’re working on. We’ve
+                        completed the core functionality and are now entering the testing phase." <span
+                            class="tooltiptext">我想快速给您汇报一下我们正在开发的模块。我们已经完成了核心功能，现在进入测试阶段。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thanks for the update. Do you foresee any challenges that might impact the
+                        timeline?" <span class="tooltiptext">感谢更新。你预见到任何可能影响时间表的挑战吗？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"So far, everything is on track. However, we might need additional testing time
+                        if any critical issues are found." <span
+                            class="tooltiptext">目前一切都在按计划进行。不过，如果发现任何关键问题，我们可能需要额外的测试时间。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Task Delegation<span class="tooltiptext">任务分配</span></caption>
+                <tr>
+                    <td class="tooltip">"Can you take care of the client presentation for next week?" <span
+                            class="tooltiptext">你能负责下周的客户演示吗？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Sure, I'll start working on it today and have a draft ready by Thursday." <span
+                            class="tooltiptext">当然，我今天就开始着手，周四前准备好初稿。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Great, let's review it together on Friday." <span
+                            class="tooltiptext">太好了，我们周五一起审查一下。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Providing Feedback<span class="tooltiptext">提供反馈</span></caption>
+                <tr>
+                    <td class="tooltip">"I reviewed your report, and it looks good overall, but I'd suggest adding more
+                        details to the third section." <span
+                            class="tooltiptext">我已经审查了你的报告，总体上不错，但我建议在第三部分添加更多细节。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thanks for the feedback! I'll make those changes and send you the updated
+                        version." <span class="tooltiptext">谢谢反馈！我会做出这些修改，并把更新后的版本发给你。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"No problem, let me know if you need any further help." <span
+                            class="tooltiptext">没问题，如果你需要进一步的帮助，告诉我。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Scheduling a Meeting<span class="tooltiptext">安排会议</span></caption>
+                <tr>
+                    <td class="tooltip">"When are you available for a meeting this week?" <span
+                            class="tooltiptext">你这周什么时候有空开会？</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I’m free on Wednesday afternoon and Friday morning." <span
+                            class="tooltiptext">我周三下午和周五上午有空。</span> </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Let's schedule it for Wednesday at 2 PM then." <span
+                            class="tooltiptext">那我们就安排在周三下午两点。</span> </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <table>
+                <caption class="tooltip">Technical Questions<span class="tooltiptext">技术问题</span></caption>
+                <tr>
+                    <td class="tooltip">"Can you explain the concept of microservices and how you've implemented them in
+                        your projects?"
+                        <span class="tooltiptext">你能解释一下微服务的概念以及你如何在项目中实现它们的吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Certainly. Microservices architecture breaks down a large application into
+                        smaller, independent services. In my previous role, I implemented microservices using Spring
+                        Boot, where each service handled a specific business function. We used Kubernetes for container
+                        orchestration and ensured that services communicated effectively through RESTful APIs and
+                        message brokers like RabbitMQ."
+                        <span class="tooltiptext">当然。微服务架构将一个大型应用程序拆分成多个独立的服务。在我之前的工作中，我使用Spring
+                            Boot实现了微服务，每个服务都处理一个特定的业务功能。我们使用Kubernetes进行容器编排，并通过RESTful
+                            API和RabbitMQ这样的消息代理来确保服务的有效通信。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"What are some challenges you've faced when working with distributed systems?"
+                        <span class="tooltiptext">你在处理分布式系统时遇到过哪些挑战？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"One major challenge is managing data consistency across services. I dealt with
+                        this by implementing eventual consistency and using distributed transactions in cases where
+                        strong consistency was required. Another challenge was ensuring reliable communication between
+                        services, which we addressed by using circuit breakers like Hystrix to prevent cascading
+                        failures."</span>
+                        <span
+                            class="tooltiptext">一个主要挑战是管理服务之间的数据一致性。我通过实现最终一致性并在需要强一致性的情况下使用分布式事务来解决这个问题。另一个挑战是确保服务之间的可靠通信，我们通过使用类似Hystrix的断路器来防止级联故障来解决这个问题。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption class="tooltip">Wrapping up the Interview<span class="tooltiptext">面试结束</span></caption>
+                <tr>
+                    <td class="tooltip">"Thank you for your time today. Do you have any questions for us?"
+                        <span class="tooltiptext">感谢你今天的时间。你有任何问题要问我们吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Yes, I would like to know more about the team structure and the main challenges
+                        this role will address."
+                        <span class="tooltiptext">是的，我想了解更多关于团队结构和这个职位将要解决的主要挑战。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"It was great talking to you. We'll be in touch soon."
+                        <span class="tooltiptext">很高兴和你聊天。我们会尽快联系你。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thank you, I'm looking forward to hearing from you."
+                        <span class="tooltiptext">谢谢，我期待收到您的消息。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section>
+            <table>
+                <caption class="tooltip">Problem-Solving and Analytical Questions<span
+                        class="tooltiptext">问题解决和分析问题</span></caption>
+                <tr>
+                    <td class="tooltip">"Can you walk us through a time when you encountered a critical bug in
+                        production? How did you handle it?"
+                        <span class="tooltiptext">你能和我们分享一次你在生产环境中遇到关键错误的经历吗？你是如何处理的？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Certainly. There was a situation where a critical API service in production
+                        started failing intermittently, causing downtime for users. I immediately initiated a rollback
+                        to a stable version to minimize impact. Then, I analyzed the logs and used a debugging tool to
+                        trace the issue back to a recent deployment that introduced a race condition. After identifying
+                        the root cause, I implemented a fix and performed thorough testing before redeploying."
+                        <span
+                            class="tooltiptext">当然。在一次生产环境中，一个关键的API服务出现间歇性故障，导致用户停机。我立刻进行了回滚操作，以将影响降到最低。然后，我分析了日志，并使用调试工具将问题追溯到最近的部署中引入的竞争条件。找到根本原因后，我实施了修复，并在重新部署前进行了全面的测试。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"How do you prioritize tasks when you're handling multiple projects?"
+                        <span class="tooltiptext">当你同时处理多个项目时，你如何确定任务的优先级？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I prioritize tasks based on their urgency, impact on the business, and
+                        deadlines. I regularly communicate with stakeholders to reassess priorities as needed, and I use
+                        task management tools to keep track of progress and ensure that no critical tasks are
+                        overlooked."
+                        <span
+                            class="tooltiptext">我根据任务的紧迫性、对业务的影响以及截止日期来确定优先级。我定期与相关人员沟通，根据需要重新评估优先级，并使用任务管理工具跟踪进度，以确保不会忽略任何关键任务。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption class="tooltip">Teamwork and Collaboration Questions<span class="tooltiptext">团队合作问题</span>
+                </caption>
+                <tr>
+                    <td class="tooltip">"Can you describe a time when you had to work closely with other teams or
+                        departments?"
+                        <span class="tooltiptext">你能描述一次你必须与其他团队或部门密切合作的经历吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"During the development of a large-scale microservices project, I had to
+                        collaborate closely with the DevOps and QA teams to ensure seamless deployment and testing. We
+                        held daily stand-ups to sync on progress and address any roadblocks. This collaboration was
+                        critical to delivering the project on time and with high quality."
+                        <span
+                            class="tooltiptext">在一个大型微服务项目的开发过程中，我必须与DevOps和QA团队密切合作，以确保无缝的部署和测试。我们每天举行站会，协调进度并解决任何障碍。这种合作对按时高质量地交付项目至关重要。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"How do you handle conflicts or disagreements within a team?"
+                        <span class="tooltiptext">你如何处理团队内部的冲突或分歧？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I believe in addressing conflicts directly and constructively. I encourage open
+                        communication and try to understand all perspectives before seeking a resolution that aligns
+                        with the team's goals. If necessary, I involve a neutral third party to mediate and ensure that
+                        the issue is resolved amicably."
+                        <span
+                            class="tooltiptext">我相信直接而建设性地解决冲突。我鼓励开放的沟通，并在寻求与团队目标一致的解决方案之前尝试了解所有观点。如果有必要，我会邀请一个中立的第三方来调解，确保问题得到友好解决。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption class="tooltip">Questions About Adaptability and Learning<span
+                        class="tooltiptext">适应性和学习问题</span></caption>
+                <tr>
+                    <td class="tooltip">"Can you tell us about a time when you had to learn a new technology or tool
+                        quickly?"
+                        <span class="tooltiptext">你能告诉我们一次你必须快速学习一种新技术或工具的经历吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"When I joined a project that required the use of Kubernetes for container
+                        orchestration, I had limited prior experience with it. I quickly enrolled in online courses,
+                        read through the official documentation, and set up a local environment to practice. Within a
+                        few weeks, I was able to contribute to the project by setting up deployment pipelines and
+                        managing clusters."
+                        <span
+                            class="tooltiptext">当我加入一个需要使用Kubernetes进行容器编排的项目时，我的经验有限。我迅速参加了在线课程，阅读了官方文档，并搭建了本地环境进行练习。在几周内，我就能够通过设置部署流水线和管理集群为项目做出贡献。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"How do you stay updated with the latest trends and technologies in your field?"
+                        <span class="tooltiptext">你如何保持对你所在领域最新趋势和技术的了解？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I regularly follow industry blogs, attend webinars, and participate in online
+                        forums. I also experiment with new tools and frameworks in my personal projects to understand
+                        their practical applications. Networking with peers and attending conferences are also valuable
+                        ways for me to stay informed."
+                        <span
+                            class="tooltiptext">我定期关注行业博客，参加网络研讨会，并参与在线论坛。我还在个人项目中尝试使用新工具和框架，以了解它们的实际应用。与同行交流和参加会议也是我保持信息更新的宝贵途径。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption class="tooltip">Closing the Interview<span class="tooltiptext">面试结束</span></caption>
+                <tr>
+                    <td class="tooltip">"Is there anything else you'd like to share with us that we haven't covered?"
+                        <span class="tooltiptext">还有什么我们没有涉及到的你想与我们分享的吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I would just like to reiterate my excitement about the opportunity to join your
+                        team. I believe my skills and experience align well with the requirements of the role, and I'm
+                        eager to contribute to your ongoing projects."
+                        <span
+                            class="tooltiptext">我想重申一下我对加入你们团队的机会感到非常兴奋。我相信我的技能和经验非常符合该职位的要求，我也很期待为你们正在进行的项目做出贡献。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thank you for your time. We will review everything and get back to you soon."
+                        <span class="tooltiptext">感谢你的时间。我们会审核所有内容，并尽快回复你。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thank you. I look forward to hearing from you."
+                        <span class="tooltiptext">谢谢。我期待收到你的消息。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption class="tooltip">Career Goals and Motivation<span class="tooltiptext">职业目标和动机</span></caption>
+                <tr>
+                    <td class="tooltip">"Where do you see yourself in five years?"
+                        <span class="tooltiptext">你对未来五年的职业规划是什么？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"In five years, I see myself taking on more leadership responsibilities,
+                        possibly as a senior developer or team lead, where I can mentor others and guide the technical
+                        direction of projects. I also aim to deepen my expertise in cloud computing and microservices
+                        architecture, contributing to more complex and impactful projects."
+                        <span
+                            class="tooltiptext">五年后，我希望能够承担更多的领导责任，可能作为高级开发人员或团队负责人，指导项目的技术方向并辅导他人。我还计划在云计算和微服务架构方面进一步深造，参与更复杂和具有影响力的项目。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"What motivates you to do your best work?"
+                        <span class="tooltiptext">什么激励你做到最好的工作？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I am motivated by the opportunity to solve challenging problems and to see the
+                        tangible impact of my work on the business and end-users. Continuous learning and the ability to
+                        work with a team of talented individuals also drive me to give my best effort."
+                        <span
+                            class="tooltiptext">解决具有挑战性的问题，并看到我的工作对业务和终端用户产生的实实在在的影响，这些都激励着我不断努力。持续学习和与有才华的团队合作的机会也促使我尽力而为。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption class="tooltip">Company Culture and Fit<span class="tooltiptext">公司文化和适应性</span></caption>
+                <tr>
+                    <td class="tooltip">"Why do you want to work at our company?"
+                        <span class="tooltiptext">你为什么想在我们公司工作？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I am particularly drawn to your company's commitment to innovation and your
+                        focus on building a collaborative and supportive work environment. The opportunity to work on
+                        cutting-edge technology and the emphasis on continuous learning align well with my personal and
+                        professional goals."
+                        <span
+                            class="tooltiptext">我特别被贵公司对创新的承诺以及构建协作和支持性工作环境的重视所吸引。能够参与前沿技术的工作机会，以及对持续学习的重视，与我的个人和职业目标非常契合。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"How do you handle working in a fast-paced environment?"
+                        <span class="tooltiptext">你如何应对快节奏的工作环境？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I thrive in fast-paced environments because they challenge me to stay organized
+                        and focused. I prioritize tasks effectively, maintain open communication with my team, and
+                        remain adaptable to changing priorities. This approach helps me maintain productivity and
+                        deliver high-quality work even under pressure."
+                        <span
+                            class="tooltiptext">我在快节奏的环境中表现得很好，因为它们挑战我保持有序和专注。我能够有效地优先处理任务，与团队保持开放的沟通，并对不断变化的优先事项保持适应性。这种方法帮助我在压力下保持生产力，并交付高质量的工作。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption class="tooltip">Project Management and Leadership<span class="tooltiptext">项目管理和领导力</span>
+                </caption>
+                <tr>
+                    <td class="tooltip">"How do you manage your time when juggling multiple priorities?"
+                        <span class="tooltiptext">当你需要处理多个优先事项时，你如何管理时间？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I start by breaking down each task into smaller, manageable steps and assigning
+                        deadlines based on their urgency and impact. I use project management tools like Jira to track
+                        progress and ensure that nothing falls through the cracks. Regular check-ins with the team also
+                        help me stay aligned with overall project goals."
+                        <span
+                            class="tooltiptext">我首先将每项任务分解为较小、可管理的步骤，并根据紧急性和影响分配截止日期。我使用像Jira这样的项目管理工具来跟踪进度，并确保不会遗漏任何任务。与团队的定期检查也帮助我保持与整体项目目标的一致性。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Can you describe your experience with leading a team through a significant
+                        change?"
+                        <span class="tooltiptext">你能描述一下你带领团队应对重大变革的经历吗？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"When my previous team had to shift from a traditional monolithic architecture
+                        to microservices, I led the change by first educating the team on the benefits and challenges. I
+                        created a clear roadmap, defined milestones, and facilitated workshops to ensure everyone was on
+                        the same page. The transition was successful, and it improved our system's scalability and
+                        performance."
+                        <span
+                            class="tooltiptext">当我之前的团队不得不从传统的单体架构转向微服务时，我通过首先向团队传达其优势和挑战来引导这一变革。我创建了一个清晰的路线图，定义了里程碑，并主持了研讨会，以确保每个人都在同一页面上。转型取得了成功，提高了系统的可扩展性和性能。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <table>
+                <caption class="tooltip">Ethical and Situational Questions<span class="tooltiptext">道德和情景问题</span>
+                </caption>
+
+                <tr>
+                    <td class="tooltip">"Have you ever faced an ethical dilemma at work? How did you handle it?"
+                        <span class="tooltiptext">你在工作中遇到过道德困境吗？你是如何处理的？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Yes, I have faced situations where project deadlines were tight, and there was
+                        pressure to compromise on quality to meet those deadlines. I addressed this by openly discussing
+                        the potential risks with my manager and the team. We worked together to find a solution that
+                        allowed us to meet the deadline without sacrificing the quality of the deliverables."
+                        <span
+                            class="tooltiptext">是的，我遇到过项目截止日期紧张的情况，并面临为满足这些截止日期而妥协质量的压力。我通过与经理和团队公开讨论潜在的风险来解决这个问题。我们共同努力，找到一个既能在不牺牲交付质量的情况下完成任务的方法。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"How would you handle a situation where a project you were working on was
+                        suddenly deprioritized?"
+                        <span class="tooltiptext">如果你正在参与的项目突然被降级优先级，你会如何处理？</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"If a project was deprioritized, I would first seek to understand the reasons
+                        behind the decision. I would then work with my team to adjust our focus and reallocate resources
+                        to higher-priority tasks. I believe in being flexible and adapting quickly to changes in project
+                        priorities while maintaining a positive and proactive approach."
+                        <span
+                            class="tooltiptext">如果一个项目被降级优先级，我会首先寻求了解决策背后的原因。然后，我会与我的团队一起调整我们的关注点，并将资源重新分配到优先级更高的任务上。我相信，在保持积极和主动的态度的同时，能够灵活应对项目优先级的变化。</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section>
+            <table>
+                <caption>Introducing yourself</caption>
+                <tr>
+                    <td class="tooltip">"Hi, my name is Yang Zhengyao. I'm pleased to have the opportunity to
+                        participate in this interview."
+                        <span class="tooltiptext">大家好，我叫杨郑耀，很高兴有机会参加这次面试。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Since 2019, I have been working in software development. Initially, I worked as
+                        a Java Developer at United Friends Technology, where I participated in the development of
+                        Customer Management Systems (CRM) and Dealer Management Systems (DMS)."
+                        <span
+                            class="tooltiptext">自2019年起，我开始从事软件开发工作。最初在联友科技担任Java开发工程师，参与研发客户管理系统（CRM）和经销商管理系统（DMS）。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Later, I was assigned to China Southern Airlines, where I was responsible for
+                        the development of the China Southern Airlines app, mini programs, and backend management
+                        systems. My most recent position was at HSBC, where I participated in the development of the
+                        HSBC app."
+                        <span class="tooltiptext">随后，我外派到中国南方航空，负责南航APP、小程序以及后台管理系统的开发。最近一份工作是在汇丰银行，参与汇丰APP的研发工作。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"In terms of front-end development, I am proficient in HTML, CSS, and
+                        JavaScript, and I am skilled in the React framework. I have experience in responsive design,
+                        using CSS and frameworks like Bootstrap to achieve multi-device compatibility."
+                        <span
+                            class="tooltiptext">在前端开发方面，我熟练掌握HTML、CSS、JavaScript，并精通React框架。拥有响应式设计的能力，能够使用CSS和框架（如Bootstrap）实现多设备兼容的响应式布局。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I am familiar with front-end build tools like Webpack and Babel, optimizing
+                        front-end performance and development processes. I am adept at using Redux and Context API to
+                        manage complex application states, and I use Jest and React Testing Library for unit testing to
+                        ensure code quality and stability."
+                        <span class="tooltiptext">我熟悉前端构建工具如Webpack、Babel等，优化前端性能和开发流程。擅长使用Redux、Context
+                            API等技术管理复杂应用的状态，能够使用Jest和React Testing Library进行单元测试，确保代码质量和稳定性。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Additionally, I am proficient in using Git for code version control and
+                        collaboration."
+                        <span class="tooltiptext">此外，我还熟练使用Git进行代码版本管理和协作。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"In terms of back-end development, I am proficient in Java and familiar with
+                        SpringBoot and SpringCloud frameworks. I have extensive experience in designing and implementing
+                        microservice architectures, enhancing system scalability and fault tolerance."
+                        <span class="tooltiptext">在后端开发方面，我精通Java，熟悉SpringBoot和SpringCloud框架，具备丰富的微服务架构设计和实现经验。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I can develop efficient RESTful APIs, following REST principles to ensure the
+                        usability and maintainability of interfaces. I am skilled in designing and optimizing relational
+                        databases (such as MySQL) and NoSQL databases (such as MongoDB)."
+                        <span class="tooltiptext">能够开发高效的RESTful
+                            API，遵循REST原则，确保接口的易用性和可维护性。我熟练掌握关系型数据库（如MySQL）和NoSQL数据库（如MongoDB）的设计和优化技巧。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I am also experienced in using message queues like Kafka and RabbitMQ to
+                        implement asynchronous communication and high availability in systems. Additionally, I have the
+                        capability to implement authentication methods such as OAuth2 and JWT to ensure system
+                        security."
+                        <span
+                            class="tooltiptext">能够使用Kafka和RabbitMQ等消息队列技术，实现系统的异步通信和高可用性。我还具备实现OAuth2、JWT等认证方式，确保系统安全的能力。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Moreover, I am familiar with containerization technologies, using Docker for
+                        application container management and Kubernetes (K8s) for container orchestration and cluster
+                        management."
+                        <span class="tooltiptext">此外，我熟悉容器化技术，能够使用Docker进行应用容器化管理，熟练使用Kubernetes（K8s）进行容器编排和集群管理。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I am proficient in common Linux commands for efficient configuration and
+                        maintenance of server environments. I have also worked with automated testing frameworks like
+                        Cucumber and Selenium, gaining experience in test-driven development and automated testing."
+                        <span
+                            class="tooltiptext">熟悉Linux常用命令，能够高效进行服务器环境的配置和维护。我还接触过自动化测试框架Cucumber和Selenium，具备一定的测试驱动开发和自动化测试经验。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"During my time at HSBC, I was primarily responsible for the following
+                        projects:"
+                        <span class="tooltiptext">在汇丰工作期间，我主要负责以下项目：</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"SHP Migration: Migrating projects from PCF to SHP cloud platform, responsible
+                        for the payments-eapi project transformation. Main steps included creating SHP directories,
+                        configuring AU's CheckMarxTeamPath for generating project reports during builds, setting Maven
+                        parameters, and specifying Kubernetes Deployment configuration files."
+                        <span
+                            class="tooltiptext">SHP迁移：将项目从PCF迁移到SHP云平台，负责payments-eapi的项目改造，主要步骤包括新建SHP目录，配置AU的CheckMarxTeamPath，用于构建时生成项目报告，配置Maven参数：“-Pplatform-shp"，并指定Kubernetes的Deployment配置文件。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Bug Fixes: Handling minor bugs for other teams, such as interface errors caused
+                        by downstream service unavailability or service cleanup."
+                        <span class="tooltiptext">Bug修复：处理其他团队的小BUG，例如下游服务不可用导致接口报错，服务被清理导致接口报错等。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Mule to Carbon: Converting Mule projects to SpringBoot projects, mainly
+                        involving the credit-card-details-fis-au-hkba project. Using Jenkins to pull the generated
+                        carbon repository and completing relevant code. Solving the problem of inter-thread variable
+                        transfer using ThreadLocal."
+                        <span class="tooltiptext">Mule to
+                            Carbon：将Mule项目转换为SpringBoot项目，主要涉及credit-card-details-fis-au-hkba项目的转换。通过Jenkins拉取生成的carbon仓库，并补全相关代码。解决了使用ThreadLocal进行线程间变量传递的难题。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Debit Card Control: Responsible for card activation and card lock/unlock
+                        functionality development, including Mule development, Carbon development, and Papi development.
+                        In the Mule project, configured flow processes through AnypointStudio, solving parameter parsing
+                        and validation issues. In Papi development, handling SMS or email sending for card activation
+                        and lock/unlock operations, and managing Sapi exceptions."
+                        <span class="tooltiptext">Debit Card
+                            Control：负责卡激活和卡锁定功能的开发，包括Mule开发、Carbon开发和Papi开发。在Mule项目中，通过AnypointStudio配置flow流程，解决参数解析和校验的难题。在Papi开发中，处理卡激活和锁定所需的短信或邮件发送，并处理Sapi的异常情况。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"I am passionate about learning, continuously staying up-to-date with the latest
+                        technologies and constantly improving my skills. I believe that my technical expertise, project
+                        experience, and team collaboration spirit can bring value to your company."
+                        <span class="tooltiptext">我热衷于学习，持续关注技术前沿，不断提升自己的技能。我相信我的技术能力、项目经验和团队合作精神能够为贵公司带来价值。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Thank you all for listening, and I look forward to further communication with
+                        you."
+                        <span class="tooltiptext">感谢大家的聆听，期待与各位进一步交流。</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tooltip">"Yang Zhengyao"
+                        <span class="tooltiptext">杨郑耀</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
         <section>
             <table>
                 <caption>Introducing yourself</caption>
@@ -358,4 +1178,5 @@
         }
     </script>
 </body>
+
 </html>
